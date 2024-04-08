@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BaRon Drinks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <h1>BaRon Drinks</h1>
+        <h2>BaRon the GO ORDER FORM</h2>
+    </header>
+
+    <form id="order-form">
+        <div class="basic-info">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+
+        <div class="cuisine-info">
+            <label for="cuisine">Type of Beverages:</label>
+            <select id="cuisine" name="cuisine">
+                <option value="cocktail">Cocktail</option>
+                <option value="beer">Beer</option>
+                <option value="non-alcoholic">Non-Alcoholic</option>
+                <option value="juice">Juice</option>
+                <option value="coffee">Coffee</option>
+                <option value="shakes">Shakes</option>
+            </select>
+
+            <label for="payment">Mode of Payment:</label>
+            <select id="payment" name="payment">
+                <option value="cash">Cash</option>
+                <option value="card">Card</option>
+            </select>
+        </div>
+
+        <div class="order-options">
+            <label for="dine-take">Dine In/Take Out:</label>
+            <select id="dine-take" name="dine-take">
+                <option value="dine-in">Dine In</option>
+                <option value="take-out">Take Out</option>
+            </select>
+
+            <label for="comments">Comments/Instructions:</label>
+            <textarea id="comments" name="comments"></textarea>
+        </div>
+
+        <div class="button-container">
+            <button type="submit" id="place-order">Place Order</button>
+            <button type="button" id="cancel-order">Cancel</button>
+        </div>
+    </form>
+
+    <div id="dropdown">
+        <button class="dropdown-toggle">
+            <span>Menu</span>
+            <i class="fa-caret-down"></i>
+        </button>
+        <ul class="menu">
+            <li class="menu-item"><a href="#">Cocktail</a></li>
+            <li class="menu-item"><a href="#">Beer</a></li>
+            <li class="menu-item dropdown">
+                <a href="#" class="submenu-toggle">
+                    <span>Non-Alcoholic</span>
+                    <i class="fa-solid fa-care-right"></i>
+                </a>
+                <ul class="submenu">
+                    <li class="submenu-item"><a href="#">Juice</a></li>
+                </ul>
+            </li>
+            <li class="menu-item"><a href="#">Coffee</a></li>
+            <li class="menu-item dropdown">
+                <a href="#" class="submenu-toggle">
+                    <span>Shakes</span>
+                    <i class="fa-solid fa-care-right"></i>
+                </a>
+                <ul class="submenu">
+                   
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
